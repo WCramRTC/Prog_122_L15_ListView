@@ -163,3 +163,32 @@ object variableName = new  {
 }
 
 ```
+
+---
+
+## In Clas Notes
+
+```csharp
+
+            //List<string> names = new List<string>
+            //{
+            //    "Juan",
+            //    "Desmond",
+            //    "Matthew",
+            //    "Kira",
+            //    "Hafsa"
+            //};
+
+            //foreach (Movie movie in movies)
+            //{
+            //    string name = movie.Name;
+            //    string releaseDate = movie.Year + "";
+            //    string director = movie.Director;
+
+            //    string formatted = $"Name: {name} - Year: {releaseDate} - Director: {director}";
+
+
+            //    lbDisplay.Items.Add(formatted);
+            //}
+
+```

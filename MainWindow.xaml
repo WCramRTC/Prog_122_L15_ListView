@@ -11,25 +11,36 @@
     Width="800">
     <Canvas>
         <ListView
-            x:Name="lvStudents"
-            Height="304"
-            Width="333"
+            x:Name="lvMovieInventory"
+            Height="352"
+            Width="462"
             d:ItemsSource="{d:SampleData ItemCount=5}"
-            Canvas.Left="424"
-            Canvas.Top="65"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Center">
+            Canvas.Left="169"
+            Canvas.Top="41">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name }"/>
                     <GridViewColumn
-                        Header="Student ID"
-                        DisplayMemberBinding="{Binding StudentId }" />
+                        Header="Name"
+                        DisplayMemberBinding="{Binding Name}"
+                        />
+                    <GridViewColumn
+                        Header="Year"
+                        DisplayMemberBinding="{Binding Year}" />
+                    <GridViewColumn 
+                        Header="Captions"
+                        DisplayMemberBinding="{Binding Captions}"
+                        />
+                    <GridViewColumn
+                        Header="Duration"
+                        DisplayMemberBinding="{Binding Duration}" />
+                    <GridViewColumn
+                        Header="Director"
+                        DisplayMemberBinding="{Binding Director}" />
+
+
+
                 </GridView>
             </ListView.View>
         </ListView>
-
-
-
     </Canvas>
 </Window>

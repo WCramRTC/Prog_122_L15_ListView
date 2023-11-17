@@ -20,48 +20,59 @@ namespace Prog_122_L15_ListView
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Student> students = new List<Student>();
-        List<object> anonymous = new List<object>();
+        List<Movie> movies;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            students.Add(new Student("Will"));
 
-            var randoObject = new
-            {
-                Name="Will"
-            };
 
-            object rainaObject = new
-            {
-                Name = "Raina"
-            };
+            movies = new List<Movie>
+        {
+            new Movie("Straight Outta Compton", "English", 2015, 147, "F. Gary Gray"),
+            new Movie("Iron Giant", "English", 1999, 86, "Brad Bird"),
+            new Movie("The Five Heartbeats", "English", 1991, 121, "Robert Townsend")
+        };
 
-            anonymous.Add(randoObject);
-            anonymous.Add(rainaObject);
+            //lbDisplay.ItemsSource = movies;
 
-            lvStudents.ItemsSource = anonymous;
+            lvMovieInventory.ItemsSource = movies;
+            
+
         }
 
     } // class
 
-    public class Student
+    public class Movie
     {
-        string _name;
-        string _studentId;
-        static Random rand = new Random();
+        string _name; 
+        string _captions;
+        int _year;
+        int _duration;
+        string _director;
 
-        public string Name { get => _name; set => _name = value; }
-        public string StudentId { get => _studentId; set => _studentId = value; }
-
-        public Student(string name)
+        public Movie(string name, string captions, int year, int duration, string director)
         {
             _name = name;
-            _studentId = rand.Next(100000000,1000000000).ToString();
+            _captions = captions;
+            _year = year;
+            _duration = duration;
+            _director = director;
         }
-    }
 
+        public string Name { get => _name; set => _name = value; }
+        public string Captions { get => _captions; set => _captions = value; }
+        public int Year { get => _year; set => _year = value; }
+        public int Duration { get => _duration; set => _duration = value; }
+        public string Director { get => _director; set => _director = value; }
+        // cast
+
+        public override string ToString()
+        {
+            return $"Name {Name} - Year {Year} - Director: {Director}";
+        }
+
+    }
 
 } // namespace
