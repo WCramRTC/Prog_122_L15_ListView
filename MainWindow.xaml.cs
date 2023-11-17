@@ -137,7 +137,7 @@ namespace Prog_122_L15_ListView
 
         public string FName { get => _fName; set => _fName = value; }
         public string LName { get => _lName; set => _lName = value; }
-        private Role Role1 { get => _role; set => _role = value; }
+        public Role Role1 { get => _role; set => _role = value; }
 
         public CrewMember(string fName, string lName, Role role)
         {
