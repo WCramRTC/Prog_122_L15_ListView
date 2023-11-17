@@ -12,24 +12,23 @@
     <Canvas>
         <ListView
             x:Name="lvMovieInventory"
-            Height="352"
-            Width="462"
+            Height="278"
+            Width="342"
             d:ItemsSource="{d:SampleData ItemCount=5}"
-            Canvas.Left="169"
-            Canvas.Top="41">
+            Canvas.Left="30"
+            Canvas.Top="23"
+            SelectionChanged="lvMovieInventory_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn
                         Header="Name"
-                        DisplayMemberBinding="{Binding Name}"
-                        />
+                        DisplayMemberBinding="{Binding Name}" />
                     <GridViewColumn
                         Header="Year"
                         DisplayMemberBinding="{Binding Year}" />
-                    <GridViewColumn 
+                    <GridViewColumn
                         Header="Captions"
-                        DisplayMemberBinding="{Binding Captions}"
-                        />
+                        DisplayMemberBinding="{Binding Captions}" />
                     <GridViewColumn
                         Header="Duration"
                         DisplayMemberBinding="{Binding Duration}" />
@@ -42,5 +41,41 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button
+            x:Name="btnAddMovie"
+            Content="Button"
+            Canvas.Left="90"
+            Canvas.Top="323"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Width="125"
+            Click="btnAddMovie_Click" />
+        <ListView
+            x:Name="lvCrew"
+            Height="290"
+            Width="386"
+            d:ItemsSource="{d:SampleData ItemCount=5}"
+            Canvas.Left="390"
+            Canvas.Top="23">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Header="First Name"
+                        DisplayMemberBinding="{Binding FName}" />
+                    <GridViewColumn
+                        Header="Last Name"
+                        DisplayMemberBinding="{Binding LName}" />
+                    <GridViewColumn
+                        Header="Role"
+                        DisplayMemberBinding="{Binding Role1}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <!--string _fName;
+        string _lName;     
+        Role _role;-->
+
+
     </Canvas>
 </Window>
